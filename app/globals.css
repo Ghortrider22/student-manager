@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F1F5F9;
+  --foreground: #0F172A;
+  --primary: #020617;
+  --accent: #2563EB;
+  --sidebar-width: 280px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --font-heading: var(--font-plus-jakarta);
+  --font-body: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: var(--font-plus-jakarta), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Utilities for "Enterprise" Feel */
+.glass-sidebar {
+  background: rgba(2, 6, 23, 0.99);
+  backdrop-filter: blur(16px);
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-enterprise {
+  box-shadow:
+    0 1px 2px 0 rgba(0, 0, 0, 0.05),
+    0 4px 12px 0 rgba(0, 0, 0, 0.03),
+    0 12px 24px -4px rgba(0, 0, 0, 0.02);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #E2E8F0;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #CBD5E1;
+}
